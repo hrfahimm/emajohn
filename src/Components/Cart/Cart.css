@@ -1,0 +1,7 @@
+.cart-order {
+	border: 2px solid cyan;
+	padding: 20px;
+}
+.cart-order h4 {
+	border-top: 1px solid black;
+}
