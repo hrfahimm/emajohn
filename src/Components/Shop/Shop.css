@@ -34,34 +34,34 @@
 } */
 
 .search-container {
-	background-color: rgb(70, 224, 201);
-	align-items: center;
-	text-align: center;
+  background-color: rgb(70, 224, 201);
+  align-items: center;
+  text-align: center;
 
-	justify-content: center;
-	background: rgb(89, 220, 230);
-	padding: 10px;
+  justify-content: center;
+  background: rgb(89, 220, 230);
+  padding: 10px;
 }
 .search-container .input-fild {
-	padding: 7px;
-	border-radius: 10px;
+  padding: 7px;
+  border-radius: 10px;
 }
 .search-container .search-btn {
-	background-color: aquamarine;
-	padding: 7px;
-	border-radius: 0px 10px 10px 0px;
-	cursor: pointer;
+  background-color: aquamarine;
+  padding: 7px;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
 }
 .search-container .search-btn:hover {
-	background-color: rgb(145, 44, 228);
+  background-color: rgb(145, 44, 228);
 }
 
 .shop-container {
-	display: grid;
-	grid-template-columns: 3fr 1fr;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 .product-container {
-	border-right: 1px solid lightblue;
-	margin-right: 10px;
-	margin-left: 50px;
+  border-right: 1px solid lightblue;
+  margin-right: 10px;
+  margin-left: 50px;
 }
