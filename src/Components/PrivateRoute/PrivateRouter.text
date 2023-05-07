@@ -1,6 +1,6 @@
 import React from "react";
 import useAuth from "../../hooks/useAuth";
-import { Route, Navigate } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 //import { render } from "@testing-library/react";
 

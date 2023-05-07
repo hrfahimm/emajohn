@@ -23,36 +23,36 @@
     cursor: pointer;
 } */
 
-
-
-
 .product {
-	display: flex;
-	border: 1px solid rgb(73, 224, 230);
-	margin: 10px;
-	background-color: rgba(79, 97, 97, 0.09);
-	border-radius: 10px;
+  display: flex;
+
+  border: 1px solid rgb(38, 46, 46);
+  margin: 7px;
+  padding: 10px;
+  border-radius: 10px;
 }
 .product-img {
-	width: 300px;
-	height: 300px;
+  width: 300px;
+  height: 300px;
 }
 .product-img img {
-	width: 100%;
+  width: 100%;
 }
 .product-name {
-	color: rgb(123, 8, 218);
-	font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
 }
 .btn-regular {
-	background-color: rgb(117, 209, 189);
-	width: 150px;
-	height: 30px;
-	border: 1px solid lightgray;
-	border-radius: 5px;
-	cursor: pointer;
+  background-color: rgb(112, 107, 106);
+  width: 150px;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
 }
 .btn-regular:hover {
-	background-color: rgb(40, 219, 180);
-	border: 1px solid black;
+  background-color: rgb(19, 19, 19);
+  border: 1px solid black;
+  color: white;
 }

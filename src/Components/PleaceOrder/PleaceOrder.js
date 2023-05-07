@@ -1,12 +1,21 @@
 import React from "react";
-import img from "../../images/1240255.png";
+import "./PleaseOrder.css";
 const PleaceOrder = () => {
-	return (
-		<div>
-			<h1>order successfull</h1>
-			<img src={img} alt="" />
-		</div>
-	);
+  return (
+    <div>
+      <div className="div">
+        <i
+          className="d-block fa-solid fa-check text-center text-gradient"
+          style={{ fontSize: "10rem" }}
+        ></i>
+        <p className="text-center">
+          Convidamos você a explorar nossas soluções e descobrir como podemos ajudar a atender às
+          suas necessidades.
+        </p>
+        <p className="btn-grad text-center">Congratulation</p>
+      </div>
+    </div>
+  );
 };
 
 export default PleaceOrder;

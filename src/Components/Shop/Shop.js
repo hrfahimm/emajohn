@@ -66,10 +66,10 @@ const Shop = () => {
           onChange={handleSearch}
         />
       </div>
-      <div className="shop-container">
-        <div className="product-container">
-          <h3>Our Products </h3>
+      
 
+      <div className="shop-container row">
+        <div className="product-container col-8">
           {displayProducts.map((product) => (
             <Product
               handleAddToCart={handleAddToCart}
@@ -78,7 +78,7 @@ const Shop = () => {
             ></Product>
           ))}
         </div>
-        <div className="cart-container">
+        <div className="cart-container col-3">
           <Cart cart={cart}>
             <Link to="/review">
               <button className="btn-regular"> Review order</button>

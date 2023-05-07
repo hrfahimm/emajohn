@@ -1,54 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-export const Register =
-  () => {
-    return (
-      <div className="login-form">
-        <div>
-          <h2>
-            Register
-            :
-            create
-            Account
-          </h2>
-          <form onSubmit="">
-            <inpu
-              type="email"
-              placeholder="Enter Your Email"
-              id=""
-              name=""
-            />
-            <br />{" "}
-            <br />
-            <input
-              type="password"
-              placeholder="Enter Password"
-            />
-            <br />{" "}
-            <br />
-            <input
-              type="password"
-              placeholder="ReEnter Password"
-            />
-            <br />{" "}
-            <br />
-            <br />
-            <input
-              type="submit"
-              value="Submit"
-            />
-          </form>
-          <p>
-            Alrady
-            have
-            an
-            Account/{" "}
-            <Link to="/login">
-              LOgin
-            </Link>
+import "./Register.css";
+export const Register = () => {
+  return (
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form">
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+          <input type="submit" valu="Submit" />
+          <p className="massage">
+            <Link to="/login">Login</Link>
           </p>
-        </div>
+        </form>
       </div>
-    );
-  };
+    </div>
+  );
+};

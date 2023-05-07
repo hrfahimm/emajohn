@@ -9,7 +9,7 @@ import PleaceOrder from "./Components/PleaceOrder/PleaceOrder";
 import { Login } from "./Components/Login/Login";
 import { Register } from "./Components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
-import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+//import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/review" element={<OrderReview />} />
             <Route path="/inventory" element={<Inventory />} />
-            <PrivateRoute path="/pleaceorder" element={<PleaceOrder />} />
+            <Route path="/pleaceorder" element={<PleaceOrder />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
