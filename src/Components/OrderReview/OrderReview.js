@@ -1,7 +1,9 @@
+/** @format */
+
 //import React, {useEffect, useState} from "react";
 import useCart from "../../hooks/useCart";
 
-import useProducts from "../../hooks/useProducts";
+//import useProducts from "../../hooks/useProducts";
 import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import "../Product/Product.css";
@@ -9,8 +11,8 @@ import "./OrderReview.css";
 import { clearTheCart, removeFromDb } from "../../utilities/fackdb";
 import { useNavigate } from "react-router-dom";
 const OrderReview = () => {
-  const [products] = useProducts();
-  const [cart, setCart] = useCart(products);
+  //const [products] = useProducts();
+  const [cart, setCart] = useCart();
   //const history = unsHistory();
   const navigate = useNavigate();
   const handleRemove = (key) => {
@@ -18,24 +20,23 @@ const OrderReview = () => {
     setCart(newCart);
     removeFromDb(key);
   };
-  const handlePleaceOrder = () => {
-    navigate("/pleaceOrder");
+  const handleProceedToShipping = () => {
+    navigate("/shipping");
     setCart([]);
     clearTheCart();
   };
 
   return (
-    <div className="shop-container row">
-      <h3>Our Order Review </h3>
-      <div className="product-container col-8">
+    <div className="shop-container">
+      <div className="product-container">
         {cart.map((product) => (
-          <ReviewItem product={product} key={product.key} handleRemove={handleRemove} />
+          <ReviewItem key={product.key} product={product} handleRemove={handleRemove}></ReviewItem>
         ))}
       </div>
-      <div className="cart-container col-3">
+      <div className="cart-container">
         <Cart cart={cart}>
-          <button onClick={handlePleaceOrder} className="btn-regular">
-            Please Order
+          <button onClick={handleProceedToShipping} className="btn-regular">
+            Proceed to Shipping
           </button>
         </Cart>
       </div>

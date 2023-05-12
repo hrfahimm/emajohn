@@ -1,3 +1,5 @@
+/** @format */
+
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Shop from "./Components/Shop/Shop";
@@ -9,6 +11,7 @@ import PleaceOrder from "./Components/PleaceOrder/PleaceOrder";
 import { Login } from "./Components/Login/Login";
 import { Register } from "./Components/Register/Register";
 import AuthProvider from "./context/AuthProvider";
+import Shipping from "./Components/Shipping/Shipping";
 //import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
             <Route path="/review" element={<OrderReview />} />
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/pleaceorder" element={<PleaceOrder />} />
+            <Route path="/shipping" element={<Shipping />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
