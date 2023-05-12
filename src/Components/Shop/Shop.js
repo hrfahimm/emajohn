@@ -1,3 +1,5 @@
+/** @format */
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { addToDb, getStoredCart } from "../../utilities/fackdb";
@@ -8,12 +10,17 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [displayProducts, setDisplayProducts] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [page, setPage] = useState(0);
   useEffect(() => {
-    fetch("./product.JSON")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
-        setDisplayProducts(data);
+        setProducts(data.products);
+        setDisplayProducts(data.products);
+        const count = data.count;
+        const pageNumber = Math.ceil(count / 10);
+        setPageCount(pageNumber);
       });
   }, []);
   useEffect(() => {
@@ -50,34 +57,32 @@ const Shop = () => {
   };
   const handleSearch = (event) => {
     const searchText = event.target.value;
-    const matchedProducts = products.filter((product) =>
-      product.name.toLowerCase().includes(searchText.toLowerCase())
-    );
+    const matchedProducts = products.filter((product) => product.name.toLowerCase().includes(searchText.toLowerCase()));
     setDisplayProducts(matchedProducts);
   };
 
   return (
     <div>
       <div className="search-container">
-        <input
-          className="input-fild"
-          type="text"
-          placeholder="Search Here..."
-          onChange={handleSearch}
-        />
+        <input className="input-fild" type="text" placeholder="Search Here..." onChange={handleSearch} />
       </div>
-      
 
       <div className="shop-container row">
         <div className="product-container col-8">
           {displayProducts.map((product) => (
-            <Product
-              handleAddToCart={handleAddToCart}
-              key={product.key}
-              product={product}
-            ></Product>
+            <Product handleAddToCart={handleAddToCart} key={product.key} product={product}></Product>
           ))}
+          <div className="pagination">
+            {[...Array(pageCount).keys()].map((number) => (
+              <button 
+              className={number === page ? 'selected':''}
+              key={number} onClick={() => setPage(number)}>
+                {number}
+              </button>
+            ))}
+          </div>
         </div>
+
         <div className="cart-container col-3">
           <Cart cart={cart}>
             <Link to="/review">
@@ -91,3 +96,5 @@ const Shop = () => {
 };
 
 export default Shop;
+
+

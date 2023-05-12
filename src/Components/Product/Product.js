@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 // import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +13,7 @@ const Product = (props) => {
       <div className="  col-3 " style={{ width: "15rem" }}>
         <img src={img} className="card-img-top" alt="" />
         <div className="card-body">
-          <h4 className="product-name">{name.slice(0, 20)}</h4>
+          <h4 className="product-name">{name.slice(0, 15)}</h4>
           <p className="product-seller">
             <small>By: {seller}</small>
           </p>
